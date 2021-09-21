@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2786CCBB-9BC3-4447-A316-414B5B48D590}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Doctor_Appointment_System</RootNamespace>
+    <AssemblyName>Doctor Appointment System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="doctorappointmentdll">
+      <HintPath>..\doctorappointmentdll\bin\Debug\doctorappointmentdll.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminpanel.aspx" />
+    <Content Include="Admin\css\font-face.css" />
+    <Content Include="Admin\css\theme.css" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-italic.svg" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-regular.svg" />
+    <Content Include="Admin\images\book1.png" />
+    <Content Include="Admin\images\cancel.png" />
+    <Content Include="Admin\images\delete.png" />
+    <Content Include="Admin\images\edit.png" />
+    <Content Include="Admin\images\icon\1234.jpg" />
+    <Content Include="Admin\images\icon\1707088.png" />
+    <Content Include="Admin\images\bg-title-01.jpg" />
+    <Content Include="Admin\images\bg-title-02.jpg" />
+    <Content Include="Admin\images\icon\admin-logo-png-6.png" />
+    <Content Include="Admin\images\icon\adminimg.png" />
+    <Content Include="Admin\images\icon\avatar-02.jpg" />
+    <Content Include="Admin\images\icon\avatar-03.jpg" />
+    <Content Include="Admin\images\icon\avatar-04.jpg" />
+    <Content Include="Admin\images\icon\avatar-05.jpg" />
+    <Content Include="Admin\images\icon\avatar-06.jpg" />
+    <Content Include="Admin\images\icon\avatar-big-01.jpg" />
+    <Content Include="Admin\images\icon\doctorlogo.png" />
+    <Content Include="Admin\images\icon\logo-blue.png" />
+    <Content Include="Admin\images\icon\logo-mini.png" />
+    <Content Include="Admin\images\icon\logo-white.png" />
+    <Content Include="Admin\images\icon\logo.png" />
+    <Content Include="Admin\images\icon\Untitled-1.jpg" />
+    <Content Include="Admin\images\icon\users.png" />
+    <Content Include="Admin\images\medicine.png" />
+    <Content Include="Admin\images\msg.png" />
+    <Content Include="Admin\images\Prescription.jpg" />
+    <Content Include="Admin\images\reply.png" />
+    <Content Include="Admin\js\main.js" />
+    <Content Include="Admin\vendor\animsition\animsition.min.css" />
+    <Content Include="Admin\vendor\animsition\animsition.min.js" />
+    <Content Include="Admin\vendor\bootstrap-4.1\bootstrap.min.css" />
+    <Content Include="Admin\vendor\bootstrap-4.1\bootstrap.min.js" />
+    <Content Include="Admin\vendor\bootstrap-4.1\popper.min.js" />
+    <Content Include="Admin\vendor\bootstrap-progressbar\bootstrap-progressbar-3.3.4.min.css" />
+    <Content Include="Admin\vendor\bootstrap-progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="Admin\vendor\chartjs\Chart.bundle.min.js" />
+    <Content Include="Admin\vendor\circle-progress\circle-progress.js" />
+    <Content Include="Admin\vendor\circle-progress\circle-progress.min.js" />
+    <Content Include="Admin\vendor\countdown\countdowntime.js" />
+    <Content Include="Admin\vendor\countdown\jquery.countdown.min.js" />
+    <Content Include="Admin\vendor\countdown\moment-timezone-with-data.min.js" />
+    <Content Include="Admin\vendor\countdown\moment-timezone.min.js" />
+    <Content Include="Admin\vendor\countdown\moment.min.js" />
+    <Content Include="Admin\vendor\counter-up\jquery.counterup.min.js" />
+    <Content Include="Admin\vendor\counter-up\jquery.waypoints.min.js" />
+    <Content Include="Admin\vendor\counter-up\waypoints.min.js" />
+    <Content Include="Admin\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Admin\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Admin\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Admin\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Admin\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Admin\vendor\font-awesome-5\css\fontawesome-all.min.css" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-brands-400.svg" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-regular-400.svg" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-solid-900.svg" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\CHANGELOG.txt" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\CONTRIBUTING.txt" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\fullcalendar.css" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\fullcalendar.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\fullcalendar.min.css" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\fullcalendar.min.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\fullcalendar.print.css" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\fullcalendar.print.min.css" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\gcal.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\gcal.min.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\lib\moment.min.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\LICENSE.txt" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale-all.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\af.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar-dz.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar-kw.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar-ly.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar-ma.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar-sa.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar-tn.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ar.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\be.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\bg.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\bs.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ca.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\cs.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\da.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\de-at.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\de-ch.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\de.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\el.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\en-au.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\en-ca.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\en-gb.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\en-ie.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\en-nz.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\es-do.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\es-us.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\es.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\et.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\eu.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\fa.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\fi.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\fr-ca.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\fr-ch.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\fr.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\gl.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\he.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\hi.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\hr.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\hu.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\id.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\is.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\it.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ja.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ka.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\kk.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ko.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\lb.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\lt.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\lv.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\mk.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ms-my.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ms.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\nb.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\nl-be.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\nl.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\nn.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\pl.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\pt-br.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\pt.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ro.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\ru.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\sk.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\sl.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\sq.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\sr-cyrl.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\sr.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\sv.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\th.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\tr.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\uk.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\vi.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\zh-cn.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\zh-hk.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\locale\zh-tw.js" />
+    <Content Include="Admin\vendor\fullcalendar-3.10.0\README.txt" />
+    <Content Include="Admin\vendor\jquery-3.2.1.min.js" />
+    <Content Include="Admin\vendor\jquery-ui.min.js" />
+    <Content Include="Admin\vendor\lightbox2\dist\css\lightbox.css" />
+    <Content Include="Admin\vendor\lightbox2\dist\images\close.png" />
+    <Content Include="Admin\vendor\lightbox2\dist\images\loading.gif" />
+    <Content Include="Admin\vendor\lightbox2\dist\images\next.png" />
+    <Content Include="Admin\vendor\lightbox2\dist\images\prev.png" />
+    <Content Include="Admin\vendor\lightbox2\dist\js\lightbox-plus-jquery.js" />
+    <Content Include="Admin\vendor\lightbox2\dist\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Admin\vendor\lightbox2\dist\js\lightbox.js" />
+    <Content Include="Admin\vendor\lightbox2\dist\js\lightbox.min.js" />
+    <Content Include="Admin\vendor\lightbox2\src\css\lightbox.css" />
+    <Content Include="Admin\vendor\lightbox2\src\images\close.png" />
+    <Content Include="Admin\vendor\lightbox2\src\images\loading.gif" />
+    <Content Include="Admin\vendor\lightbox2\src\images\next.png" />
+    <Content Include="Admin\vendor\lightbox2\src\images\prev.png" />
+    <Content Include="Admin\vendor\lightbox2\src\js\lightbox.js" />
+    <Content Include="Admin\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Admin\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Admin\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Admin\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Admin\vendor\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="Admin\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Admin\vendor\progressbar\progressbar.js" />
+    <Content Include="Admin\vendor\progressbar\progressbar.min.js" />
+    <Content Include="Admin\vendor\select2\select2.min.css" />
+    <Content Include="Admin\vendor\select2\select2.min.js" />
+    <Content Include="Admin\vendor\slick\ajax-loader.gif" />
+    <Content Include="Admin\vendor\slick\fonts\slick.svg" />
+    <Content Include="Admin\vendor\slick\slick-theme.css" />
+    <Content Include="Admin\vendor\slick\slick.css" />
+    <Content Include="Admin\vendor\slick\slick.js" />
+    <Content Include="Admin\vendor\slick\slick.min.js" />
+    <Content Include="Admin\vendor\smk-accordion\accordion.css" />
+    <Content Include="Admin\vendor\smk-accordion\accordion.js" />
+    <Content Include="Admin\vendor\smk-accordion\accordion.min.js" />
+    <Content Include="Admin\vendor\sweetalert\sweetalert.min.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.brazil.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.europe.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.france.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.germany.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.min.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.russia.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.usa.js" />
+    <Content Include="Admin\vendor\vector-map\jquery.vmap.world.js" />
+    <Content Include="Admin\vendor\vector-map\jqvmap.min.css" />
+    <Content Include="Admin\vendor\wow\animate.css" />
+    <Content Include="Admin\vendor\wow\wow.min.js" />
+    <Content Include="appointment.aspx" />
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\bootstrap\.DS_Store" />
+    <Content Include="css\css\.DS_Store" />
+    <Content Include="currentbookings.aspx" />
+    <Content Include="deptadd.aspx" />
+    <Content Include="doctorlogin.aspx" />
+    <Content Include="doctorpanel.aspx" />
+    <Content Include="doctorregister.aspx" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\flaticon\.DS_Store" />
+    <Content Include="fonts\flaticon\font\.DS_Store" />
+    <Content Include="fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="fonts\flaticon\license\license.pdf" />
+    <Content Include="fonts\icomoon\icomoon.eot" />
+    <Content Include="fonts\icomoon\icomoon.ttf" />
+    <Content Include="fonts\icomoon\icomoon.woff" />
+    <Content Include="fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="fonts\open-iconic\open-iconic.eot" />
+    <Content Include="fonts\open-iconic\open-iconic.otf" />
+    <Content Include="fonts\open-iconic\open-iconic.ttf" />
+    <Content Include="fonts\open-iconic\open-iconic.woff" />
+    <Content Include="images\.DS_Store" />
+    <Content Include="images\13986.jpg" />
+    <Content Include="images\bgmedic.jpg" />
+    <Content Include="images\corona_info_0.png" />
+    <Content Include="images\doc1.jpg" />
+    <Content Include="images\doctor1.jpg" />
+    <Content Include="images\regnow.png" />
+    <Content Include="images\regnow1.png" />
+    <Content Include="images\stethescope.jpg" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="listofbookings.aspx" />
+    <Content Include="listofusers.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="messages.aspx" />
+    <Content Include="messagesdoctor.aspx" />
+    <Content Include="prescription.aspx" />
+    <Content Include="repliesfromadmin.aspx" />
+    <Content Include="scss\.DS_Store" />
+    <Content Include="scss\bootstrap\.DS_Store" />
+    <Content Include="scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap\bootstrap.scss" />
+    <Content Include="scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="scss\bootstrap\mixins\_float.scss" />
+    <Content Include="scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="scss\bootstrap\mixins\_image.scss" />
+    <Content Include="scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="scss\bootstrap\mixins\_size.scss" />
+    <Content Include="scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="scss\bootstrap\utilities\_align.scss" />
+    <Content Include="scss\bootstrap\utilities\_background.scss" />
+    <Content Include="scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="scss\bootstrap\utilities\_display.scss" />
+    <Content Include="scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="scss\bootstrap\utilities\_float.scss" />
+    <Content Include="scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="scss\bootstrap\utilities\_position.scss" />
+    <Content Include="scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="scss\bootstrap\utilities\_text.scss" />
+    <Content Include="scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="scss\bootstrap\_alert.scss" />
+    <Content Include="scss\bootstrap\_badge.scss" />
+    <Content Include="scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="scss\bootstrap\_button-group.scss" />
+    <Content Include="scss\bootstrap\_buttons.scss" />
+    <Content Include="scss\bootstrap\_card.scss" />
+    <Content Include="scss\bootstrap\_carousel.scss" />
+    <Content Include="scss\bootstrap\_close.scss" />
+    <Content Include="scss\bootstrap\_code.scss" />
+    <Content Include="scss\bootstrap\_custom-forms.scss" />
+    <Content Include="scss\bootstrap\_dropdown.scss" />
+    <Content Include="scss\bootstrap\_forms.scss" />
+    <Content Include="scss\bootstrap\_functions.scss" />
+    <Content Include="scss\bootstrap\_grid.scss" />
+    <Content Include="scss\bootstrap\_images.scss" />
+    <Content Include="scss\bootstrap\_input-group.scss" />
+    <Content Include="scss\bootstrap\_jumbotron.scss" />
+    <Content Include="scss\bootstrap\_list-group.scss" />
+    <Content Include="scss\bootstrap\_media.scss" />
+    <Content Include="scss\bootstrap\_mixins.scss" />
+    <Content Include="scss\bootstrap\_modal.scss" />
+    <Content Include="scss\bootstrap\_nav.scss" />
+    <Content Include="scss\bootstrap\_navbar.scss" />
+    <Content Include="scss\bootstrap\_pagination.scss" />
+    <Content Include="scss\bootstrap\_popover.scss" />
+    <Content Include="scss\bootstrap\_print.scss" />
+    <Content Include="scss\bootstrap\_progress.scss" />
+    <Content Include="scss\bootstrap\_reboot.scss" />
+    <Content Include="scss\bootstrap\_root.scss" />
+    <Content Include="scss\bootstrap\_spinners.scss" />
+    <Content Include="scss\bootstrap\_tables.scss" />
+    <Content Include="scss\bootstrap\_toasts.scss" />
+    <Content Include="scss\bootstrap\_tooltip.scss" />
+    <Content Include="scss\bootstrap\_transitions.scss" />
+    <Content Include="scss\bootstrap\_type.scss" />
+    <Content Include="scss\bootstrap\_utilities.scss" />
+    <Content Include="scss\bootstrap\_variables.scss" />
+    <Content Include="scss\style.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Patientlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Patientlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Patientlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Patientlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Patientlogin\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Patientlogin\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Black.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-BlackItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Bold.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-BoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-ExtraBold.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-ExtraBoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-ExtraLight.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-ExtraLightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Italic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Light.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-LightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Medium.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-MediumItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Regular.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-SemiBold.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-SemiBoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-Thin.ttf" />
+    <Content Include="Patientlogin\fonts\raleway\Raleway-ThinItalic.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <Content Include="Patientlogin\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Patientsignup\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Patientsignup\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Patientsignup\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Patientsignup\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-100italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-200italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-300italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-500italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-600italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-700italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-800italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-900italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-italic.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-italic.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-italic.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-italic.woff2" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-regular.eot" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-regular.ttf" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-regular.woff" />
+    <Content Include="Admin\fonts\poppins\poppins-v5-latin-regular.woff2" />
+    <Content Include="Admin\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-brands-400.eot" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-brands-400.ttf" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-brands-400.woff" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-brands-400.woff2" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-regular-400.eot" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-regular-400.ttf" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-regular-400.woff" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-regular-400.woff2" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-solid-900.eot" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-solid-900.ttf" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-solid-900.woff" />
+    <Content Include="Admin\vendor\font-awesome-5\webfonts\fa-solid-900.woff2" />
+    <Content Include="Admin\vendor\lightbox2\dist\js\lightbox-plus-jquery.min.map" />
+    <Content Include="Admin\vendor\lightbox2\dist\js\lightbox.min.map" />
+    <Content Include="Admin\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Admin\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Admin\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Admin\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Admin\vendor\slick\config.rb" />
+    <Content Include="Admin\vendor\slick\fonts\slick.eot" />
+    <Content Include="Admin\vendor\slick\fonts\slick.ttf" />
+    <Content Include="Admin\vendor\slick\fonts\slick.woff" />
+    <Content Include="Admin\vendor\slick\slick-theme.less" />
+    <Content Include="Admin\vendor\slick\slick-theme.scss" />
+    <Content Include="Admin\vendor\slick\slick.less" />
+    <Content Include="Admin\vendor\slick\slick.scss" />
+    <Content Include="images\ODAS.pdf" />
+    <Content Include="images\RGF.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\ajax-loader.gif" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\aos.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap\bootstrap-grid.css" />
+    <Content Include="css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="css\css\bootstrap-reboot.css" />
+    <Content Include="css\css\mixins\_text-hide.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\icomoon.css" />
+    <Content Include="css\ionicons.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\open-iconic-bootstrap.min.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\owl.theme.default.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\flaticon\backup.txt" />
+    <Content Include="fonts\flaticon\font\flaticon.css" />
+    <Content Include="fonts\flaticon\font\flaticon.html" />
+    <Content Include="fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="fonts\icomoon\icomoon.svg" />
+    <Content Include="fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="fonts\open-iconic\open-iconic.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\bg_1.jpg" />
+    <Content Include="images\bg_2.jpg" />
+    <Content Include="images\bg_3.jpg" />
+    <Content Include="images\dept-1.jpg" />
+    <Content Include="images\doc-1.jpg" />
+    <Content Include="images\doc-2.jpg" />
+    <Content Include="images\doc-3.jpg" />
+    <Content Include="images\doc-4.jpg" />
+    <Content Include="images\doc-5.jpg" />
+    <Content Include="images\doc-6.jpg" />
+    <Content Include="images\doc-7.jpg" />
+    <Content Include="images\doc-8.jpg" />
+    <Content Include="images\footer-bg.jpg" />
+    <Content Include="images\image_1.jpg" />
+    <Content Include="images\image_2.jpg" />
+    <Content Include="images\image_3.jpg" />
+    <Content Include="images\image_4.jpg" />
+    <Content Include="images\image_5.jpg" />
+    <Content Include="images\image_6.jpg" />
+    <Content Include="images\image_7.jpg" />
+    <Content Include="images\image_8.jpg" />
+    <Content Include="images\img1.jpg" />
+    <Content Include="images\img2.jpg" />
+    <Content Include="images\loc.png" />
+    <Content Include="images\person_1.jpg" />
+    <Content Include="images\person_2.jpg" />
+    <Content Include="images\person_3.jpg" />
+    <Content Include="images\person_4.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\aos.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\google-map.js" />
+    <Content Include="js\jquery-3.2.1.min.js" />
+    <Content Include="js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="js\jquery.animateNumber.min.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.stellar.min.js" />
+    <Content Include="js\jquery.waypoints.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\scrollax.min.js" />
+    <Content Include="Patientlogin.aspx" />
+    <Content Include="Patientlogin\css\main.css" />
+    <Content Include="Patientlogin\css\util.css" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Patientlogin\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Patientlogin\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Patientlogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Patientlogin\fonts\montserrat\OFL.txt" />
+    <Content Include="Patientlogin\fonts\raleway\OFL.txt" />
+    <Content Include="Patientlogin\fonts\ubuntu\UFL.txt" />
+    <Content Include="Patientlogin\images\icons\favicon.ico" />
+    <Content Include="Patientlogin\images\icons\icon-google.png" />
+    <Content Include="Patientlogin\images\icons\map-marker.png" />
+    <Content Include="Patientlogin\images\icons\symbol-01.png" />
+    <Content Include="Patientlogin\js\main.js" />
+    <Content Include="Patientlogin\vendor\animate\animate.css" />
+    <Content Include="Patientlogin\vendor\animsition\css\animsition.css" />
+    <Content Include="Patientlogin\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Patientlogin\vendor\animsition\js\animsition.js" />
+    <Content Include="Patientlogin\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Patientlogin\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Patientlogin\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Patientlogin\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Patientlogin\vendor\bootstrap\js\popper.js" />
+    <Content Include="Patientlogin\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Patientlogin\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Patientlogin\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Patientlogin\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Patientlogin\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Patientlogin\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Patientlogin\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Patientlogin\vendor\daterangepicker\moment.js" />
+    <Content Include="Patientlogin\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Patientlogin\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Patientlogin\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Patientlogin\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Patientlogin\vendor\select2\select2.css" />
+    <Content Include="Patientlogin\vendor\select2\select2.js" />
+    <Content Include="Patientlogin\vendor\select2\select2.min.css" />
+    <Content Include="Patientlogin\vendor\select2\select2.min.js" />
+    <Content Include="patientsignup.aspx" />
+    <Content Include="Patientsignup\css\main.css" />
+    <Content Include="Patientsignup\js\global.js" />
+    <Content Include="Patientsignup\vendor\datepicker\daterangepicker.css" />
+    <Content Include="Patientsignup\vendor\datepicker\daterangepicker.js" />
+    <Content Include="Patientsignup\vendor\datepicker\moment.min.js" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Patientsignup\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Patientsignup\vendor\jquery\jquery.js" />
+    <Content Include="Patientsignup\vendor\jquery\jquery.min.js" />
+    <Content Include="Patientsignup\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Patientsignup\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Patientsignup\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Patientsignup\vendor\select2\select2.min.css" />
+    <Content Include="Patientsignup\vendor\select2\select2.min.js" />
+    <Content Include="sendfeedback.aspx" />
+    <Content Include="sendfeedback_doctor.aspx" />
+    <Content Include="send_message.aspx" />
+    <Content Include="Status.aspx" />
+    <Content Include="updatedoctor.aspx" />
+    <Content Include="updatepatient.aspx" />
+    <Content Include="viewappdoctor.aspx" />
+    <Content Include="viewdept.aspx" />
+    <Content Include="viewfeedback.aspx" />
+    <Content Include="viewfeeddoctor.aspx" />
+    <Content Include="viewprescription.aspx" />
+    <Content Include="viewregistereddoctors.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminpanel.aspx.cs">
+      <DependentUpon>adminpanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminpanel.aspx.designer.cs">
+      <DependentUpon>adminpanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appointment.aspx.cs">
+      <DependentUpon>appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appointment.aspx.designer.cs">
+      <DependentUpon>appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="currentbookings.aspx.cs">
+      <DependentUpon>currentbookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="currentbookings.aspx.designer.cs">
+      <DependentUpon>currentbookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deptadd.aspx.cs">
+      <DependentUpon>deptadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deptadd.aspx.designer.cs">
+      <DependentUpon>deptadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctorlogin.aspx.cs">
+      <DependentUpon>doctorlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctorlogin.aspx.designer.cs">
+      <DependentUpon>doctorlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctorpanel.aspx.cs">
+      <DependentUpon>doctorpanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctorpanel.aspx.designer.cs">
+      <DependentUpon>doctorpanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctorregister.aspx.cs">
+      <DependentUpon>doctorregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctorregister.aspx.designer.cs">
+      <DependentUpon>doctorregister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listofbookings.aspx.cs">
+      <DependentUpon>listofbookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listofbookings.aspx.designer.cs">
+      <DependentUpon>listofbookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listofusers.aspx.cs">
+      <DependentUpon>listofusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listofusers.aspx.designer.cs">
+      <DependentUpon>listofusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messagesdoctor.aspx.cs">
+      <DependentUpon>messagesdoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="messagesdoctor.aspx.designer.cs">
+      <DependentUpon>messagesdoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patientlogin.aspx.cs">
+      <DependentUpon>Patientlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patientlogin.aspx.designer.cs">
+      <DependentUpon>Patientlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patientsignup.aspx.cs">
+      <DependentUpon>patientsignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patientsignup.aspx.designer.cs">
+      <DependentUpon>patientsignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="prescription.aspx.cs">
+      <DependentUpon>prescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prescription.aspx.designer.cs">
+      <DependentUpon>prescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="repliesfromadmin.aspx.cs">
+      <DependentUpon>repliesfromadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="repliesfromadmin.aspx.designer.cs">
+      <DependentUpon>repliesfromadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sendfeedback.aspx.cs">
+      <DependentUpon>sendfeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sendfeedback.aspx.designer.cs">
+      <DependentUpon>sendfeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sendfeedback_doctor.aspx.cs">
+      <DependentUpon>sendfeedback_doctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sendfeedback_doctor.aspx.designer.cs">
+      <DependentUpon>sendfeedback_doctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="send_message.aspx.cs">
+      <DependentUpon>send_message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="send_message.aspx.designer.cs">
+      <DependentUpon>send_message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatedoctor.aspx.cs">
+      <DependentUpon>updatedoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatedoctor.aspx.designer.cs">
+      <DependentUpon>updatedoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatepatient.aspx.cs">
+      <DependentUpon>updatepatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatepatient.aspx.designer.cs">
+      <DependentUpon>updatepatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewappdoctor.aspx.cs">
+      <DependentUpon>viewappdoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewappdoctor.aspx.designer.cs">
+      <DependentUpon>viewappdoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewdept.aspx.cs">
+      <DependentUpon>viewdept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewdept.aspx.designer.cs">
+      <DependentUpon>viewdept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewfeedback.aspx.cs">
+      <DependentUpon>viewfeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewfeedback.aspx.designer.cs">
+      <DependentUpon>viewfeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewfeeddoctor.aspx.cs">
+      <DependentUpon>viewfeeddoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewfeeddoctor.aspx.designer.cs">
+      <DependentUpon>viewfeeddoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewprescription.aspx.cs">
+      <DependentUpon>viewprescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewprescription.aspx.designer.cs">
+      <DependentUpon>viewprescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewregistereddoctors.aspx.cs">
+      <DependentUpon>viewregistereddoctors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewregistereddoctors.aspx.designer.cs">
+      <DependentUpon>viewregistereddoctors.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61530</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61530/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
